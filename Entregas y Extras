@@ -1,0 +1,282 @@
+#Tarea 1
+piloto = ["Leclerc", "Sainz", "Verstappen", "Checo", "Hamilton", "Norris", "Ricciardo"]
+print(piloto)
+
+preferencia = input("cual es tu piloto favorito?")
+piloto.append(preferencia)
+print(piloto)
+
+#Tarea 2
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Ingresa tu edad: "))
+pais = input("Ingresa tu pais: ")
+
+
+persona = {
+    "nombre": nombre,
+    "edad": edad,
+    "pais": pais
+}
+
+if persona["edad"] < 18:
+    print(f"{persona['nombre']} le falta calle.")
+elif 18 <= persona["edad"] < 65:
+    print(f"{persona['nombre']} se la sabe toa.")
+else:
+    print(f"{persona['nombre']} Gran Torino le dicen.")
+
+
+if persona["pais"] == "RD":
+    print(f"{persona['nombre']} tiene el sazon.")
+else:
+    print(f"{persona['nombre']} le falta sazon.")
+
+
+#Tarea 3
+# rasgo1
+while True:
+    rasgo = input("Selecciona el rasgo de tu artista principal: true damage, idolo de masas, forjahechizo, country, deslumbrante, disco, guardian, KDA: ")
+    if rasgo == "idolo de masas":
+        artista_principal = input("Quien sera tu artista principal? Katarina, Evelyn, Yone, Zed, Quiyana: ")
+        break
+    elif rasgo == "true damage":
+        artista_principal = input("Quien sera tu artista principal? Ekko, Yasuo, Kennen, Senna, Quiyana, Akali: ")
+        break
+    elif rasgo == "forjahechizo":
+        artista_principal = input("Quien sera tu artista principal? Annie, Seraphine, Ekko, Sona, Gragas, Lulu, Ahri: ")
+        break
+    elif rasgo == "country":
+        artista_principal = input("Quien sera tu artista principal? Katarina, Urgot, Samira, Tham Kench, Tresh: ")
+        break
+    elif rasgo == "deslumbrante":
+        artista_principal = input("Quien sera tu artista principal? Bardo, Nami, Lux, Twisted Fate, Ziggs: ")
+        break
+    elif rasgo == "disco":
+        artista_principal = input("Quien sera tu artista principal? Taric, Gragas, Blitzcrank, Twisted Fate, Nami: ")
+        break
+    elif rasgo == "guardian":
+        artista_principal = input("Quien sera tu artista principal? Taric, Neeko, Kennen, Amumu, Pantheon, Tresh, Yorick: ")
+        break
+    elif rasgo == "KDA":
+        artista_principal = input("Quien sera tu artista principal? Evelyn, Seraphine, Lillia, Kai Sa, Ahri, Akali, Neeko: ")
+        break
+    else:
+        print("Ese rasgo no puede ser evaluado")
+##rasgo2
+while True:
+    rasgo2 = input("Con qué rasgo lo unirás: true damage, idolo de masas, forjahechizo, country, deslumbrante, disco, guardian, KDA: ")
+    if rasgo2 == "KDA":
+        conjunto_KDA = int(input("""Cual conjunto KDA prefieres utilizar?
+        1: Evelyn, Lillia, Seraphine,
+        2: Evelyn, Seraphine, Kai'Sa,
+        3: Lillia, Kai'Sa, Seraphine,
+        4: Evelyn, Neeko, Seraphine
+        """))
+        break
+    elif rasgo2 == "true damage":
+        conjunto_true_damage = int(input("""Cual conjunto True Damage prefieres utilizar?
+        1: Yasuo, Kennen, Ekko,
+        2: Akali, Ekko, Senna,
+        3: Quiyana, Yasuo, Akali,
+        4: Kennen, Akali, Quiyana
+        """))
+        break
+    elif rasgo2 == "forjahechizo":
+        conjunto_forjahechizo = int(input("""Cual conjunto Frojahechizo prefieres utilizar?
+        1: Annie, Gragas, Seraphine,
+        2: Ekko, Annie, Gragas,
+        3: Lulu, Seraphine, Sona,
+        4: Sona, Ekko, Ahri
+        """))
+        break
+    elif rasgo2 == "country":
+        conjunto_country = int(input("""Cual conjunto Country prefieres utilizar?
+        1: Katarina, Samira, Tham Kench,
+        2: Tham Kench, Tresh, Urgot,
+        3: Urgot, Samira, Katarina,
+        4: Tresh, Katarina, Urgot
+        """))
+        break
+    elif rasgo2 == "deslumbrante":
+        conjunto_deslumbrante = int(input("""Cual conjunto Deslumbrante prefieres utilizar?
+        1: Lux, Bardo, Nami],
+        2: Ziggs, Twisted Fate, Lux,
+        3: Nami, Twisted Fate, Zigg,
+        4: Bargo, Ziggs, Lux
+        """))
+        break
+    elif rasgo2 == "disco":
+        conjunto_disco = int(input("""Cual conjunto Disco prefieres utilizar?
+        1: Taric, Blitzcrank, Gragas,
+        2: Nami, Gragas, Twisted Fate,
+        3: Twisted Fate, Taric, Blitzcrank,
+        4: Nami, Taric, Gragas
+        """))
+        break
+    elif rasgo2 == "guardian":
+        conjunto_guardian = int(input("""Cual conjunto Guardian prefieres utilizar?
+        1: Amumu, Kennen, Neeko,
+        2: Taric, Tresh, Yorick,
+        3: Pantheon, Amumu, Taric,
+        4: Yorick, Neeko, Pantheon
+        """))
+        break
+  
+    elif rasgo2 == "idolo de masas":
+        conjunto_guardian = int(input("""Cual conjunto Guardian prefieres utilizar?
+        1: Katarina, Evelyn, Yone,
+        2: Yone, Akali, Katarina,
+        3: Quiyana, Evelyn, Zed,
+        4: Zed, Katarina, Quiyana
+        """))
+        break
+    else:
+        print("Ese rasgo no puede ser evaluado")
+
+##Items
+while True:
+    items = input("¿A cuáles items le darás prioridad para tu rasgo principal? Tanque, AD, AP: ")
+
+    if rasgo == "idolo de masas":
+        if items == "Tanque":
+          print("Si no complementas con Superfan te la bebiste")
+          break
+        elif items == "AD":
+          print("Debes complementar con true damage porque sino hay bobo")
+          break
+        elif items == "AP":
+          print("Very very good choice, que no se olviden un par de items ap/tanque pa ponerle más sazón")
+          break
+        else:
+            print("Esos items no tan")
+
+    if rasgo == "true damage":
+      if items == "Tanque" :
+        print("la mejor opción, ese ekko tanque da miedo güey")
+        break
+      elif items == "AD" :
+        print("ah pero tu quiere borra al primer basico e")
+        break
+      elif items == "AP" :
+        print("yo espero que tu no estes intentardo eso en ranked, abusador")
+        break
+      else:
+          print("Esos items no tan")
+        
+    if rasgo == "forjahechizo":
+     if items == "Tanque" :
+        print("muy bien pensado, pila de tanque y do rabaddon, una obra")
+        break
+     elif items == "AD" :
+        print("ah no, pero esto es un chiste pa ti... sicario")
+        break
+     elif items == "AP" :
+        print("Osea si, pero ten en cuenta que tu casi no tienes tanques. Procura borrar en el pimer basico")
+        break
+     else:
+          print("Esos items no tan")
+
+    if rasgo == "country" :
+      if items == "Tanque" :
+        print("no ta mal, pero te vas a quedar sin daño basicamente")
+        break
+      elif items == "AD" :
+        print("el chichi turbo te van a decir")
+        break
+      elif items == "AP" :
+        print("bruh, mira bai")
+        break
+      else:
+        print("Esos items no tan")
+
+    if rasgo == "deslumbrante" : 
+      if items == "Tanque" :
+        print("ni na voy a decir")
+        break
+      elif items == "AD" :
+        print("ta gracioso pa")
+        break
+      elif items == "AP" :
+        print("e que no hay de otra mijo")
+        break
+      else:
+        print("Esos items no tan")
+
+    if rasgo == "disco" : 
+      if items == "Tanque" :
+        print("smart choice, pero no te concentre solo ahi, dale un toquecito de AP")
+        break
+      elif items == "AD" :
+        print("loco vete acota")
+        break
+      elif items == "AP" :
+        print("si coges ese taric y le metes aunque sea do de tanque, la tiene hecha")
+        break
+      else:
+        print("Esos items no tan")
+
+    if rasgo == "guardian" : 
+      if items == "Tanque" :
+        print("o sea si, pero si no le pusite AD mejor rindete")
+        break
+      elif items == "AD" :
+        print("ecolecua, esa e la vuelta")
+        break
+      elif items == "AP" :
+        print("tu no tiene sueño? VETE ACOTA")
+        break
+      else:
+        print("Esos items no tan")
+
+    if rasgo == "KDA" : 
+      if items == "Tanque" :
+        print("no creo que vayas a llegar muy lejos asi, revalua tu existencia")
+        break
+      elif items == "AD" :
+        print("si le pones par de AP mangate to")
+        break
+      elif items == "AP" :
+        print("ta pensando el miop")
+        break
+      else:
+        print("Esos items no tan")
+
+#Tarea 4
+##Tarea
+
+class Anime:
+    def __init__(self, opening, personaje, arc):
+        self.OP = opening
+        self.personaje = personaje
+        self.arc = arc
+
+    def imprimir_informacion(self):
+        print(f"OP: {self.OP}, Personaje: {self.personaje}, Arco: {self.arc}")
+
+anime1 = Anime("Unravel", "Kaneki", "Nishiki")
+anime2 = Anime("Specialz", "Geto", "Shibuya Incident")
+
+class Ending(Anime):
+    def __init__(self, opening, personaje, arc, ending):
+        super().__init__(opening, personaje, arc)
+        self.end = ending
+
+ending1 = Ending("Unravel", "Kaneki", "Nishiki", "Half")
+ending2 = Ending("Specialz", "Geto", "Shibuya Incident", "none")
+
+ending1.imprimir_informacion()
+print(ending1.end)
+
+ending2.imprimir_informacion()
+print(ending2.end)
+
+#Extra
+num = int(input("ingresa un numero entre 1 y 20: "))
+if num > 10 and num < 20:
+  print("el valor seleccionado es mayor que 10")
+elif num < 10:
+    print("el valor seleccionado es menor que 10")
+elif num == 10:
+      print("el valor seleccionado es 10")
+else:
+  print("cocoliso, eso no ta entre 1 y 20")
